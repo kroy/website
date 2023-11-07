@@ -1,0 +1,33 @@
+---
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
+import randomString from "crypto-random-string"
+
+interface Props {
+  backToHome?: boolean
+}
+
+const { backToHome } = Astro.props
+
+const headingLineSeparator = randomString({length: 150})
+const shortHeadingSeparator = headingLineSeparator.substring(0, 75)
+---
+
+<header class="relative text-2xl flex items-center gap-1 max-w-full">
+  <div class="group select-none"><span class="underline underline-offset-[6px] decoration-wavy">Kiron Roy </span>
+    <div class="hidden z-20 group-hover:flex group-active:flex absolute border-[0.5px] border-accent p-2 rounded-md shadow-solid flex-col bg-background">
+      <div class="text-sm">
+        My face:
+      </div>
+      <img src="/kroy_prof.jpg" width="128"class="rounded-full w-[128px] h-[128px]"/>
+    </div>
+  </div>
+  <span class="md:hidden font-line text-sm shrink-1 overflow-hidden text-clip">{shortHeadingSeparator}</span>
+  <span class="hidden md:inline overflow-hidden text-clip"> has website <span class="font-line text-sm">{headingLineSeparator}</span></span>
+  <a href="https://github.com/kroy" target="_blank" rel="noopener">
+    <GitHubLogoIcon className="h-5 w-5 text-text"/>
+  </a>
+  <a href="https://www.linkedin.com/in/kiron-roy-94896a36/" target="_blank" rel="noopener">
+    <LinkedInLogoIcon className="h-5 w-5 text-text"/>
+  </a>
+  {backToHome && <a href="/"><span>&larr;</span> Back home</a>}
+</header>

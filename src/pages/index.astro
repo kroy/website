@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import ExpanderCard from '../components/ExpanderCard';
+---
+
+<Layout title="kroy's website">
+	<main class="grid grid-cols-1 md:grid-cols-2 gap-2 relative justify-center min-h-max">
+		<ExpanderCard title="Summarized" client:load>
+			<ul class="list-disc list-inside font-extralight">
+				<li>I've been programming professionally for 12 years</li>
+				<li>... with a couple &#126;year long breaks for travelling.</li>
+				<li>I like to take <a href="/photos">photographs</a> and ride my bike</li>
+				<li>... sometimes at the same time!</li>
+				<li>I have a son whom I love very much &hearts;</li>
+			</ul>
+		</ExpanderCard>
+		<Card title="Photos" body='' href='/photos'/>
+		<Card title="Projects" body='' href=''/>
+		<Card title="Resume" body='is' href=''/>
+		<ExpanderCard title="Contact" client:load>
+			<ul>
+				<li><a href="mailto:kroy.xc@gmail.com">email</a></li>
+				<li><a href="https://github.com/kroy" target="_blank" rel="noopener">github</a></li>
+				<li><a href="https://www.linkedin.com/in/kiron-roy-94896a36/" target="_blank" rel="noopener">linkedin</a></li>
+			</ul>
+		</ExpanderCard>
+		<div class="flex flex-col gap-1 justify-center items-center h-16 text-2xl">
+			&#127801;
+		</div>
+	</main>
+</Layout>

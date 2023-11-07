@@ -1,0 +1,67 @@
+---
+import Header from '../components/Header.astro';
+interface Props {
+	title: string;
+	backToHome?: boolean;
+}
+
+const { title, backToHome } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Kiron's website" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="flex md:justify-center min-h-screen min-w-screen md:items-center bg-background p-4">
+			<div class="flex flex-col gap-4 w-full md:max-w-[700px]">
+				<Header backToHome={backToHome}/>
+				<slot />
+			</div>
+		</div>
+	</body>
+</html>
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Linefont:wght@100&family=VT323&display=swap');
+	:root {
+		--accent: hsl(25.61,93.18%,82.75%);
+		--accent-light: hsl(41.86,84.31%,90%);
+		--accent-dark: hsl(9.92,100%,75.1%);
+		--background: hsl(54, 83.33%, 97.65%);
+		--pop: hsl(335.95,100%,50.59%);
+		--link: hsl(219.8,100%,39.02%);
+		--text: hsl(353.58,100%,63.33%);
+		--accent-gradient: linear-gradient(
+			45deg,
+			var(--accent),
+			var(--accent-light) 30%,
+			white 60%
+		);
+	}
+	a {
+		@apply text-link underline decoration-dashed;
+	}
+
+	html {
+		@apply bg-background text-text;
+		font-family: vt323, system-ui, sans-serif;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
