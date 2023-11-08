@@ -31,7 +31,7 @@ const ExpanderCard = ({ title, children }: ExpanderCardProps) => {
               onClick={() => {
                 setExpanded(false);
               }}
-              className="w-4 h-4"
+              className="w-7 h-7 cursor-pointer"
             />
           ) : (
             <Maximize2 className="w-4 h-4" />
