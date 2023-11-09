@@ -23,13 +23,13 @@ const ExpanderCard = ({ title, children }: ExpanderCardProps) => {
         className={clsx(
           "border-accent border-[0.5px] h-16 rounded-md transition motion-reduce:transition-none ease-in duration-300",
           {
-            "absolute top-0 w-full h-full bg-accent z-10": expanded,
+            "absolute top-0 w-full h-full min-h-fit bg-accent z-10": expanded,
             "cursor-nwse-resize hover:shadow-solid": !expanded,
           }
         )}
       >
         <div className="relative flex flex-col justify-center items-center h-full w-full p-2">
-          <h2>{title}</h2>
+          <h2 className="text-xl">{title}</h2>
           {expanded && children}
           <div
             className={clsx(
