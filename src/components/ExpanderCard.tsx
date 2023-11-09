@@ -50,7 +50,7 @@ const ExpanderCard = ({ title, children }: ExpanderCardProps) => {
               className="w-7 h-7 cursor-nw-resize"
             />
           ) : (
-            <Maximize2 className="w-4 h-4" />
+            <Maximize2 className="w-3 h-3" />
           )}
         </div>
       </div>

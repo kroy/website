@@ -13,7 +13,7 @@ export default {
         text: "var(--text)",
       },
       boxShadow: {
-        solid: "5px 5px 0px 2px",
+        solid: "1px 1px 0px 1px var(--accent-light), 5px 5px 0px 2px",
       },
       fontFamily: {
         line: "Linefont",

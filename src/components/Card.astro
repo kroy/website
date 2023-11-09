@@ -1,24 +1,44 @@
 ---
+import { ArrowRightIcon, DownloadIcon, ExternalLinkIcon } from '@radix-ui/react-icons';
+
 interface Props {
 	title: string;
 	body: string;
 	href?: string;
+	icon?: "ArrowRight" | "Download" | "ExternalLink"
 	download?: string;
 }
 
-const { href, title, body, download } = Astro.props;
+const { href, title, body, icon, download } = Astro.props;
 
+let Icon = ArrowRightIcon;
+
+switch (icon) {
+	case "ArrowRight":
+		Icon = ArrowRightIcon
+		break;
+	case "Download":
+		Icon = DownloadIcon
+		break;
+	case "ExternalLink":
+		Icon = ExternalLinkIcon
+		break
+	default:
+		break;
+}
 ---
 
 <a class="no-underline text-text" href={href} {download}>
-	<div class="flex flex-col justify-center items-center border-accent border-[0.5px] hover:shadow-solid shadow-pop-light h-16 rounded-md p-2">
+	<div class="flex flex-col justify-center items-center border-accent border-[0.5px] hover:shadow-solid shadow-pop-light h-16 rounded-md p-2 relative">
 		<h2>
 			{title}
-			<span>&rarr;</span>
 		</h2>
 		<p>
 			{body}
 		</p>
+		<div class="absolute bottom-0 right-0 p-1">
+			<Icon />
+		</div>
 	</div>
 </a>
 <!-- <style>
