@@ -29,7 +29,7 @@ const ExpanderCard = ({ title, children }: ExpanderCardProps) => {
         )}
       >
         <div className="relative flex flex-col justify-center items-center h-full w-full p-2">
-          <h2 className="text-xl">{title}</h2>
+          <h2 className={clsx({ underline: expanded })}>{title}</h2>
           {expanded && children}
           <div
             className={clsx(
