@@ -20,7 +20,7 @@ const { title, backToHome } = Astro.props;
 	</head>
 	<body>
 		<div class="flex md:justify-center min-h-screen min-w-screen md:items-center bg-background p-4">
-			<div class="flex flex-col gap-4 w-full md:max-w-[700px]">
+			<div class="flex flex-col gap-4 w-full md:max-w-[900px]">
 				<Header backToHome={backToHome}/>
 				<slot />
 			</div>
@@ -28,7 +28,7 @@ const { title, backToHome } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Linefont:wght@100&family=VT323&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Linefont:wght@100&family=VT323&display=swap');
 	:root {
 		--accent: hsl(25.61,93.18%,82.75%);
 		--accent-light: hsl(41.86,84.31%,90%);
@@ -50,6 +50,10 @@ const { title, backToHome } = Astro.props;
 
 	h2 {
 		@apply text-xl;
+	}
+
+	.flipper {
+		transform: rotateY(180deg)
 	}
 
 	html {

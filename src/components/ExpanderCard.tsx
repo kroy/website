@@ -4,7 +4,7 @@ import { Maximize2, Minimize2 } from "lucide-react";
 
 type ExpanderCardProps = {
   title: string;
-  children?: React.Node;
+  children?: React.ReactNode;
 };
 
 const ExpanderCard = ({ title, children }: ExpanderCardProps) => {
@@ -20,13 +20,11 @@ const ExpanderCard = ({ title, children }: ExpanderCardProps) => {
         onClick={() => {
           if (!expanded) setExpanded(true);
         }}
-        className={clsx(
-          "border-accent border-[0.5px] h-16 rounded-md transition motion-reduce:transition-none ease-in duration-300",
-          {
-            "absolute top-0 w-full h-full min-h-fit bg-accent z-10": expanded,
-            "cursor-nwse-resize hover:shadow-solid": !expanded,
-          }
-        )}
+        className={clsx("border-accent border-[0.5px] h-16 rounded-md", {
+          "absolute top-0 w-full h-full min-h-fit bg-accent z-10 transition motion-reduce:transition-none ease-in duration-300":
+            expanded,
+          "cursor-nwse-resize hover:shadow-solid transition-none": !expanded,
+        })}
       >
         <div className="relative flex flex-col justify-center items-center h-full w-full p-2">
           <h2 className={clsx({ underline: expanded })}>{title}</h2>
