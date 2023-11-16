@@ -8,15 +8,19 @@ import FlipCard from "../components/FlipCard";
   <main class="flex flex-col w-full h-full justify-center items-center">
     <h2>Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 w-full h-screen gap-2 relative">
+      <!-- Resilience -->
       <FlipCard client:load>
         <div slot="front" class="flex flex-col h-full justify-center items-center gap-2">
           <h2>Resilience Lab Clinician Directory</h2>
-          <img src="/projects/rl_dir.png" alt="resilience lab directory" width="300" />
+          <img class="md:hidden max-h-96 shadow-xl rounded-md" src="/projects/rl_dir_mobile.png" alt="resilience lab directory" />
+          <div class="group">
+            <img class="hidden md:inline-block shadow-xl rounded-md" src="/projects/rl_dir.png" alt="resilience lab directory" width="300" />
+            <div class="hidden group-hover:block absolute inset-5 w-96 h-96"><img class="shadow-xl rounded-md" src="/projects/rl_dir.png" alt="resilience lab directory" /></div>
+          </div>
         </div>
         <div slot="back" class="flex flex-col h-full justify-center items-center gap-3">
           <h2>Resilience Lab Clinician Directory</h2>
           <ul class="flex flex-wrap gap-2">
-            <li class="px-1 rounded-full bg-accent-light text-accent-dark">professional</li>
             <li class="px-1 rounded-full bg-accent-light text-accent-dark">nextjs</li>
             <li class="px-1 rounded-full bg-accent-light text-accent-dark">graphql</li>
             <li class="px-1 rounded-full bg-accent-light text-accent-dark">fullstack</li>
@@ -27,17 +31,52 @@ import FlipCard from "../components/FlipCard";
           </div>
         </div>
         <Fragment slot="bottom-rail">
-          <ExternalLinkIcon /> 
-          <ExternalLinkIcon /> 
+          <a href="https://therapists.resiliencelab.us/therapists?state=NY" rel="noopener" target="_blank"><div class="flex items-center gap-1 text-xl">Visit Project<ExternalLinkIcon /></div></a>
         </Fragment>
       </FlipCard>
+      <!-- D2 Drafter -->
       <FlipCard client:load>
-        <p slot="front">Hello</p>
-        <p slot="back">Goodbye</p>
+        <div slot="front" class="flex flex-col h-full justify-center items-center gap-2">
+          <h2>Resilience Lab Clinician Directory</h2>
+          <img src="/projects/rl_dir.png" alt="resilience lab directory" width="300" />
+        </div>
+        <div slot="back" class="flex flex-col h-full justify-center items-center gap-3">
+          <h2>Resilience Lab Clinician Directory</h2>
+          <ul class="flex flex-wrap gap-2">
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">nextjs</li>
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">graphql</li>
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">fullstack</li>
+          </ul>
+          <div class="font-josefin font-light px-4">
+            <p>A search and discovery experience that facilitates prospective clients in finding a therapist that'll match their preferences. Clients can filter and select from the pool of eligible therapists at the practice Resilience Lab.</p>
+            <p>The directory uses <span>Nextjs</span> to render the client application, either on the server or the client, depending on the page/component. Data flows from a Nestjs backend via a graphql API, queried with Apollo.</p>
+          </div>
+        </div>
+        <Fragment slot="bottom-rail">
+          <a href="https://therapists.resiliencelab.us/therapists?state=NY" rel="noopener" target="_blank"><div class="flex items-center gap-1 text-xl">Visit Project<ExternalLinkIcon /></div></a>
+        </Fragment>
       </FlipCard>
+      <!-- Chicago Police Data -->
       <FlipCard client:load>
-        <p slot="front">Hello</p>
-        <p slot="back">Goodbye</p>
+        <div slot="front" class="flex flex-col h-full justify-center items-center gap-2">
+          <h2>Resilience Lab Clinician Directory</h2>
+          <img src="/projects/rl_dir.png" alt="resilience lab directory" width="300" />
+        </div>
+        <div slot="back" class="flex flex-col h-full justify-center items-center gap-3">
+          <h2>Resilience Lab Clinician Directory</h2>
+          <ul class="flex flex-wrap gap-2">
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">nextjs</li>
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">graphql</li>
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">fullstack</li>
+          </ul>
+          <div class="font-josefin font-light px-4">
+            <p>A search and discovery experience that facilitates prospective clients in finding a therapist that'll match their preferences. Clients can filter and select from the pool of eligible therapists at the practice Resilience Lab.</p>
+            <p>The directory uses <span>Nextjs</span> to render the client application, either on the server or the client, depending on the page/component. Data flows from a Nestjs backend via a graphql API, queried with Apollo.</p>
+          </div>
+        </div>
+        <Fragment slot="bottom-rail">
+          <a href="https://therapists.resiliencelab.us/therapists?state=NY" rel="noopener" target="_blank"><div class="flex items-center gap-1 text-xl">Visit Project<ExternalLinkIcon /></div></a>
+        </Fragment>
       </FlipCard>
     </div>
   </main>
