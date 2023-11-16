@@ -11,15 +11,15 @@ import FlipCard from "../components/FlipCard";
       <!-- Resilience -->
       <FlipCard client:load>
         <div slot="front" class="flex flex-col h-full justify-center items-center gap-2">
-          <h2>Resilience Lab Clinician Directory</h2>
+          <h2 class="text-center">Resilience Lab Clinician Directory</h2>
           <img class="md:hidden max-h-96 shadow-xl rounded-md" src="/projects/rl_dir_mobile.png" alt="resilience lab directory" />
-          <div class="group">
-            <img class="hidden md:inline-block shadow-xl rounded-md" src="/projects/rl_dir.png" alt="resilience lab directory" width="300" />
-            <div class="hidden group-hover:block absolute inset-5 w-96 h-96"><img class="shadow-xl rounded-md" src="/projects/rl_dir.png" alt="resilience lab directory" /></div>
+          <div class="group relative">
+            <img class="hidden md:inline-block shadow-xl rounded-md group-hover:blur-sm" src="/projects/rl_dir.png" alt="resilience lab directory" width="300" />
+            <div class="hidden group-hover:block absolute inset-5 w-[500px] h-96 z-10"><img class="shadow-xl rounded-md" src="/projects/rl_dir.png" alt="resilience lab directory" /></div>
           </div>
         </div>
         <div slot="back" class="flex flex-col h-full justify-center items-center gap-3">
-          <h2>Resilience Lab Clinician Directory</h2>
+          <h2 class="text-center">Resilience Lab Clinician Directory</h2>
           <ul class="flex flex-wrap gap-2">
             <li class="px-1 rounded-full bg-accent-light text-accent-dark">nextjs</li>
             <li class="px-1 rounded-full bg-accent-light text-accent-dark">graphql</li>
@@ -37,45 +37,52 @@ import FlipCard from "../components/FlipCard";
       <!-- D2 Drafter -->
       <FlipCard client:load>
         <div slot="front" class="flex flex-col h-full justify-center items-center gap-2">
-          <h2>Resilience Lab Clinician Directory</h2>
-          <img src="/projects/rl_dir.png" alt="resilience lab directory" width="300" />
+          <h2 class="text-center">Dota 2 Draft Analyzer (WIP)</h2>
+          <img class="md:hidden max-h-96 shadow-xl rounded-md" src="/projects/drafter_mobile.png" alt="dota 2 drafting tool" />
+          <div class="group relative">
+            <img class="hidden md:inline-block shadow-xl rounded-md group-hover:blur-sm" src="/projects/drafter.png" alt="dota 2 drafting tool" width="300" />
+            <div class="hidden group-hover:block absolute top-0 w-[500px] h-96 z-10"><img class="shadow-xl rounded-md" src="/projects/drafter.png" alt="dota 2 drafting tool" /></div>
+          </div>
         </div>
         <div slot="back" class="flex flex-col h-full justify-center items-center gap-3">
-          <h2>Resilience Lab Clinician Directory</h2>
+          <h2 class="text-center">Dota 2 Draft Analyzer (WIP)</h2>
           <ul class="flex flex-wrap gap-2">
             <li class="px-1 rounded-full bg-accent-light text-accent-dark">nextjs</li>
-            <li class="px-1 rounded-full bg-accent-light text-accent-dark">graphql</li>
-            <li class="px-1 rounded-full bg-accent-light text-accent-dark">fullstack</li>
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">fun</li>
           </ul>
           <div class="font-josefin font-light px-4">
-            <p>A search and discovery experience that facilitates prospective clients in finding a therapist that'll match their preferences. Clients can filter and select from the pool of eligible therapists at the practice Resilience Lab.</p>
-            <p>The directory uses <span>Nextjs</span> to render the client application, either on the server or the client, depending on the page/component. Data flows from a Nestjs backend via a graphql API, queried with Apollo.</p>
+            <p>A small draft tool for the game <span>Dota 2</span>, to help you and your friends come up with fun and good teams</p>
+            <p>This is a WIP, but eventually I'd like for this to be a browser-based multiplayer game, with draft analysis and suggestions.</p>
           </div>
         </div>
         <Fragment slot="bottom-rail">
-          <a href="https://therapists.resiliencelab.us/therapists?state=NY" rel="noopener" target="_blank"><div class="flex items-center gap-1 text-xl">Visit Project<ExternalLinkIcon /></div></a>
+          <a href="https://draft-analyzer.vercel.app/drafter" rel="noopener" target="_blank"><div class="flex items-center gap-1 text-xl">Visit Project<ExternalLinkIcon /></div></a>
         </Fragment>
       </FlipCard>
       <!-- Chicago Police Data -->
       <FlipCard client:load>
         <div slot="front" class="flex flex-col h-full justify-center items-center gap-2">
-          <h2>Resilience Lab Clinician Directory</h2>
-          <img src="/projects/rl_dir.png" alt="resilience lab directory" width="300" />
+          <h2 class="text-center">Chicago Police Department use of force data sanitization and cross-identification</h2>
+          <!-- <img class="md:hidden max-h-96 shadow-xl rounded-md" src="/projects/drafter_mobile.png" alt="dota 2 drafting tool" />
+          <div class="group relative">
+            <img class="hidden md:inline-block shadow-xl rounded-md group-hover:blur-sm" src="/projects/drafter.png" alt="dota 2 drafting tool" width="300" />
+            <div class="hidden group-hover:block absolute top-0 w-[500px] h-96 z-10"><img class="shadow-xl rounded-md" src="/projects/drafter.png" alt="dota 2 drafting tool" /></div>
+          </div> -->
         </div>
         <div slot="back" class="flex flex-col h-full justify-center items-center gap-3">
-          <h2>Resilience Lab Clinician Directory</h2>
+          <h2 class="text-center">Chicago Police Department use of force data sanitization and cross-identification</h2>
           <ul class="flex flex-wrap gap-2">
-            <li class="px-1 rounded-full bg-accent-light text-accent-dark">nextjs</li>
-            <li class="px-1 rounded-full bg-accent-light text-accent-dark">graphql</li>
-            <li class="px-1 rounded-full bg-accent-light text-accent-dark">fullstack</li>
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">python</li>
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">numpy</li>
+            <li class="px-1 rounded-full bg-accent-light text-accent-dark">data-analysis</li>
           </ul>
           <div class="font-josefin font-light px-4">
-            <p>A search and discovery experience that facilitates prospective clients in finding a therapist that'll match their preferences. Clients can filter and select from the pool of eligible therapists at the practice Resilience Lab.</p>
-            <p>The directory uses <span>Nextjs</span> to render the client application, either on the server or the client, depending on the page/component. Data flows from a Nestjs backend via a graphql API, queried with Apollo.</p>
+            <p>Worked with sociologists at Columbia University who were analyzing use of force data from the Chicago Police Department to sanitize, de-dupe, and identify officers across datasets.</p>
+            <p>I set up a (fairly rudimentary) data ingestion pipeline to process the millions of rows of data using <span>numpy</span> and jupyter notebooks &#128584;. It wasn't pretty but I learned a lot!</p>
           </div>
         </div>
         <Fragment slot="bottom-rail">
-          <a href="https://therapists.resiliencelab.us/therapists?state=NY" rel="noopener" target="_blank"><div class="flex items-center gap-1 text-xl">Visit Project<ExternalLinkIcon /></div></a>
+          <a href="https://github.com/kroy/cpd-parse" rel="noopener" target="_blank"><div class="flex items-center gap-1 text-xl">Visit Project<ExternalLinkIcon /></div></a>
         </Fragment>
       </FlipCard>
     </div>
